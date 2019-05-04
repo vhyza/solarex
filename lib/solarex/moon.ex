@@ -1,6 +1,6 @@
 defmodule Solarex.Moon do
   @moduledoc """
-  Solarex.Moon module is for calculating moon phase for particular date.
+  Solarex.Moon is module for calculating moon phase for particular date.
 
   This module implements naive approach by calculating the number of days since a known new moon
   https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase
@@ -57,7 +57,7 @@ defmodule Solarex.Moon do
   end
 
   @doc """
-  Calculate remaining days to next new moon for the passed date using know new moon date and synodic month
+  Returns remaining days to next new moon for the passed date using know new moon date and synodic month
   https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase
 
       iex> Solarex.Moon.days_to_new_moon(~D[2019-05-05])

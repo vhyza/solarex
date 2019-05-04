@@ -1,6 +1,10 @@
 # Solarex
 
-Solarex brings `Solarex.Moon` module for calculating [moon phase](https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase) using naive approach by calculating the days from the known new moon.
+Elixir package for calculating moon phase, sunrise and sunset for particular date and place on the Earth.
+
+### Moon
+
+`Solarex.Moon` module is for calculating [moon phase](https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase) using naive approach by calculating the days from the known new moon.
 
 You can specify known new moon using `config.exs`
 
@@ -11,6 +15,10 @@ use Mix.Config
 #
 config :solarex, known_new_moon: "2019-01-06"
 ```
+
+### Sun
+
+`Solarex.Sun` is Elixir implementation of Mike Bostock's [Solar Calculator](https://github.com/mbostock/solar-calculator). It can be used for calculating sunrise and sunset for particular date and place on earth (specified by latitude and longitude)
 
 ## Installation
 
