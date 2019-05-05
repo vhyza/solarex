@@ -1,4 +1,8 @@
 defmodule Solarex.Math do
+  @moduledoc """
+  Solarex.Math module represents mathematical functions used in Solarex.Sun module.
+  """
+
   defdelegate acos(x), to: :math
   defdelegate sin(x), to: :math
   defdelegate tan(x), to: :math
@@ -30,7 +34,7 @@ defmodule Solarex.Math do
   end
 
   @doc """
-  Calculates the remainder after division of one x by y
+  Calculates the remainder after division of x by y
 
       iex> Solarex.Math.modulo(19, 3)
       1.0

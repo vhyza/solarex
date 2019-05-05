@@ -127,7 +127,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the time of the solar noon for Date, latitude and longitude.
-  https://en.wikipedia.org/wiki/Noon#Solar_noon
+  [https://en.wikipedia.org/wiki/Noon#Solar_noon](https://en.wikipedia.org/wiki/Noon#Solar_noon)
 
       iex> noon = Solarex.Sun.noon(~D[2017-01-01], 50.0598054, 14.3251989)
       ...> Timex.format!(noon, "{ISO:Extended}")
@@ -142,7 +142,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the unix timestamp in milliseconds of the solar noon for passed timestamp in milliseconds and longitude.
-  https://en.wikipedia.org/wiki/Noon#Solar_noon
+  [https://en.wikipedia.org/wiki/Noon#Solar_noon](https://en.wikipedia.org/wiki/Noon#Solar_noon)
 
       iex> Solarex.Sun.noon(1483228800000, 14.3251989)
       1483268794183
@@ -188,7 +188,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns hour angle of sunrise for the given unix timestamp and latitude in degrees.
-  https://en.wikipedia.org/wiki/Hour_angle
+  [https://en.wikipedia.org/wiki/Hour_angle](https://en.wikipedia.org/wiki/Hour_angle)
 
       iex> Solarex.Sun.rise_hour_angle(1497026562000, 37.7749)
       {:ok, -110.40483214814614}
@@ -211,7 +211,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the equation of time the for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Equation_of_time
+  [https://en.wikipedia.org/wiki/Equation_of_time](https://en.wikipedia.org/wiki/Equation_of_time)
 
       iex> Solarex.Sun.equation_of_time(0.17437909156589854)
       0.6590584715529293
@@ -238,7 +238,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the sun's equation of center for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Equation_of_the_center
+  [https://en.wikipedia.org/wiki/Equation_of_the_center](https://en.wikipedia.org/wiki/Equation_of_the_center)
 
       iex> Solarex.Sun.equation_of_center(0.17437909156589854)
       0.7934457966327464
@@ -256,7 +256,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the solar declination in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Position_of_the_Sun#Declination_of_the_Sun_as_seen_from_Earth
+  [https://en.wikipedia.org/wiki/Position_of_the_Sun#Declination_of_the_Sun_as_seen_from_Earth](https://en.wikipedia.org/wiki/Position_of_the_Sun#Declination_of_the_Sun_as_seen_from_Earth)
 
       iex> Solarex.Sun.declination(0.17437909156589854)
       22.982073772785167
@@ -268,7 +268,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the obliquity of the Earth’s ecliptic in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Ecliptic#Obliquity_of_the_ecliptic
+  [https://en.wikipedia.org/wiki/Ecliptic#Obliquity_of_the_ecliptic](https://en.wikipedia.org/wiki/Ecliptic#Obliquity_of_the_ecliptic)
 
       iex> Solarex.Sun.obliquity_of_ecliptic(0.17437909156589854)
       23.43485798269169
@@ -283,7 +283,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the sun's mean longitude in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Mean_longitude
+  [https://en.wikipedia.org/wiki/Mean_longitude](https://en.wikipedia.org/wiki/Mean_longitude)
 
       iex> Solarex.Sun.mean_longitude(0.17437909156589854)
       78.24800784813306
@@ -300,7 +300,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the sun's true longitude in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/True_longitude
+  [https://en.wikipedia.org/wiki/True_longitude](https://en.wikipedia.org/wiki/True_longitude)
 
     iex> Solarex.Sun.true_longitude(0.17437909156589854)
     79.04145364476581
@@ -312,7 +312,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the sun's apparent longitude in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Apparent_longitude
+  [https://en.wikipedia.org/wiki/Apparent_longitude](https://en.wikipedia.org/wiki/Apparent_longitude)
 
       iex> Solarex.Sun.apparent_longitude(0.17437909156589854)
       79.0332141755133
@@ -324,7 +324,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns the sun's mean anomaly in degrees for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Mean_anomaly
+  [https://en.wikipedia.org/wiki/Mean_anomaly](https://en.wikipedia.org/wiki/Mean_anomaly)
 
       iex> Solarex.Sun.mean_anomaly(0.17437909156589854)
       6635.010792131577
@@ -336,7 +336,7 @@ defmodule Solarex.Sun do
 
   @doc """
   Returns eccentricity for given t in J2000.0 centuries.
-  https://en.wikipedia.org/wiki/Orbital_eccentricity
+  [https://en.wikipedia.org/wiki/Orbital_eccentricity](https://en.wikipedia.org/wiki/Orbital_eccentricity)
 
       iex> Solarex.Sun.orbit_eccentricity(0.17437909156589854)
       0.016701299773425684
