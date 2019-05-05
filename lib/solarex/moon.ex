@@ -74,10 +74,10 @@ defmodule Solarex.Moon do
     |> round()
   end
 
-  @known_new_moon Application.get_env(:solarex, :known_new_moon)
   @spec known_new_moon() :: Date.t()
   defp known_new_moon() do
-    Timex.parse!(@known_new_moon, "%Y-%m-%d", :strftime)
+    Application.get_env(:solarex, :known_new_moon)
+    |> Timex.parse!("%Y-%m-%d", :strftime)
     |> Timex.to_date()
   end
 
