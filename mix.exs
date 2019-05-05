@@ -7,7 +7,7 @@ defmodule Solarex.MixProject do
         "Elixir package for calculating moon phase, sunrise and sunset for particular date and place on the Earth.",
       app: :solarex,
       source_url: "https://github.com/vhyza/solarex",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       docs: [
