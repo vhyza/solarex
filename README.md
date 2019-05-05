@@ -9,7 +9,7 @@ The package can be installed by adding `solarex` to your list of dependencies in
 ```elixir
 def deps do
   [
-    {:solarex, "~> 0.1.0"}
+    {:solarex, "~> 0.1.1"}
   ]
 end
 ```
