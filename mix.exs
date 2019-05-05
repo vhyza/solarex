@@ -30,7 +30,8 @@ defmodule Solarex.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      env: [known_new_moon: "2019-01-06"]
     ]
   end
 
