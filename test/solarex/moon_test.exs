@@ -15,6 +15,6 @@ defmodule Solarex.MoonTest do
   end
 
   test "should return days elapsed from new moon phase" do
-    assert Solarex.Moon.days_to_new_moon(~D[2019-02-19]) == 14
+    assert Solarex.Moon.days_to_new_moon(~D[2019-02-19]) == 14.469411146999999
   end
 end

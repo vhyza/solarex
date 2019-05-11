@@ -27,32 +27,15 @@ defmodule Solarex.Moon do
   @spec phase(Date.t()) :: atom()
   def phase(%Date{} = date) do
     case days_to_new_moon(date) do
-      d when d in 0..1 ->
-        :new_moon
-
-      d when d in 2..6 ->
-        :waxing_crescent
-
-      d when d in 7..8 ->
-        :first_quarter
-
-      d when d in 9..13 ->
-        :waxing_gibbous
-
-      d when d in 14..15 ->
-        :full_moon
-
-      d when d in 16..21 ->
-        :waning_gibbous
-
-      d when d in 22..23 ->
-        :third_quarter
-
-      d when d in 24..28 ->
-        :waning_crescent
-
-      d when d >= 29 ->
-        :new_moon
+      d when d >= 0 and d <= 1 -> :new_moon
+      d when d > 1 and d < 6 -> :waxing_crescent
+      d when d >= 6 and d <= 8 -> :first_quarter
+      d when d > 8 and d < 14 -> :waxing_gibbous
+      d when d >= 14 and d <= 16 -> :full_moon
+      d when d > 16 and d < 21 -> :waning_gibbous
+      d when d >= 21 and d <= 23 -> :third_quarter
+      d when d > 23 and d < 29 -> :waning_crescent
+      d when d >= 29 -> :new_moon
     end
   end
 
@@ -61,7 +44,7 @@ defmodule Solarex.Moon do
   [https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase](https://en.wikipedia.org/wiki/Lunar_phase#Calculating_phase)
 
       iex> Solarex.Moon.days_to_new_moon(~D[2019-05-05])
-      1
+      0.8776445879999955
   """
   @spec days_to_new_moon(Date.t()) :: number()
   @synodic_month 29.530588853
@@ -70,8 +53,7 @@ defmodule Solarex.Moon do
 
     cycles = Float.floor(days / @synodic_month)
 
-    (days - cycles * @synodic_month)
-    |> round()
+    days - cycles * @synodic_month
   end
 
   @spec known_new_moon() :: Date.t()
